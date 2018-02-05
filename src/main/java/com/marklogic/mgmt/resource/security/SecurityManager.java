@@ -13,10 +13,6 @@ public class SecurityManager extends AbstractManager {
 		this.manageClient = manageClient;
 	}
 
-	@Override
-	protected boolean useAdminUser() {
-		return true;
-	}
 
 	public ResponseEntity<String> performSecurityOperation(String payload) {
 		return postPayload(manageClient, SECURITY_OPERATION_PATH, payload);
